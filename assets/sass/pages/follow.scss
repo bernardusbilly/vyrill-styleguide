@@ -1,0 +1,348 @@
+/* For follow.html and follow-settings.html*/
+
+body {
+	.main.follow {
+		.right-container {
+			.float-container {
+				.notification-header {
+					font-weight: bold;
+					padding: 20px 20px 10px 20px;
+					text-transform: uppercase;
+					form input {
+						background: transparent;
+						border: none;
+						display: inline-block;
+						position: absolute;
+						width: 25px;
+						z-index: 1;
+					}
+					span.icon-bin-blue {
+						background-color: white;
+						outline: 1px solid $grey-border-2;
+					}
+				}
+				.notification-container {
+					background-color: white;
+					border: 1px solid $grey-border-2;
+					display: block;
+					padding: 10px 15px;
+					figure.logo {
+						height: 46px;
+						overflow: hidden;
+						width: 46px;
+						img {
+							height: 46px;
+						}
+					}
+					.btn-group {
+						cursor: pointer;
+						height: 20px;
+						width: 20px;
+					}
+					.notification-preview {
+						overflow: hidden;
+						width: 100%;
+						height: 80px;
+					}
+					.notification-product-name {
+						font-weight: bold;
+					}
+					ul {
+						&.unread-message {
+							color: $purple;
+							list-style-type: disc;
+							margin-left: 15px;
+						}
+						li {
+							a {
+								color: $purple;
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+							span {
+								color: $grey-text;
+							}
+						}
+					}
+					.video-group {
+						figure {
+							position: relative;
+							figcaption {
+								background-color: rgba(0,0,0,0.2);
+								bottom: 0;
+								color: white;
+								left: 0;
+								padding: 4px;
+								position: absolute;
+								text-transform: uppercase;
+							}
+							.banner {
+								position: absolute;
+								right: 0;
+								top: 0;
+							}
+						}
+						.header {
+							font-weight: bold;
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap;
+						}
+						.header,
+						.creator,
+						.description {
+							text-overflow: ellipsis;
+							overflow: hidden;
+							white-space: nowrap;
+						}
+					}
+					.time {
+						font-size: 10px;
+					}
+				}
+				.add-notif-container {
+					background-color: white;
+					border: 1px solid $grey-border-2;
+					padding: 0 25px 30px 25px;
+					.add-notif-header {
+						font-weight: bold;
+						font-size: 18px;
+					}
+					ul li {
+						display: inline-block;
+						margin: 0 10px;
+						padding: 8px 16px;
+						position: relative;
+						text-transform: uppercase;
+						&.selected,
+						&:hover {
+							border-bottom: 5px solid $blue-follow;
+						}
+						&::after {
+							content: "";
+							background-color: $grey-dark;
+							height: 24px;
+							position: absolute;
+							right: -10px;
+							top: 6px;
+							width: 1px;
+						}
+						&:last-child {
+							&::after {
+								content: none;
+							}
+						}
+					}
+					.searchbar {
+						padding: 8px 16px;
+						width: 100%;
+					}
+					.product-level {
+						border-top: 1px solid $grey-border-2;
+					}
+					.notif-wrapper {
+						padding: 15px;
+						position: relative;
+						text-align: center;
+						width: 100%;
+						figure {
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+							img {
+								height: inherit;
+							}
+							&.circle {
+								border-radius: 50%;
+								height: 100px;
+								overflow: hidden;
+								width: 100px;	
+							}
+						}
+						.follow-button {
+							@include border-radius(6px);
+							background-color: white;
+							border: 1px solid $grey-border-2;
+							color: $grey-text;
+							margin: 4px auto;
+
+							&:after {
+								content: "Follow";
+							}
+							&.to-add {
+								&:hover {
+									background-color: $grey;
+								}
+							}
+							&.to-remove {
+								background-color: $grey-dark;
+								border-color: $grey-dark;
+								color: white;
+								&:after {
+									content: "Following";
+								}
+								&:hover {
+									background-color: $red;
+									border-color: $red;
+									color: white;
+									&:after {
+										content: "Unfollow";
+									}
+								}
+							}
+						}
+						.show-products-button {
+							@include border-radius(6px);
+							background-color: white;
+							border: 1px solid $grey-border-2;
+							color: $grey-text;
+							margin: 4px auto;
+							&:hover {
+								background-color: $grey;
+							}
+						}
+						.notif-wrapper-title {
+							text-transform: uppercase;
+						}
+						.add-new {
+							@include border-radius(50%);
+							background-color: white;
+							border: 1px solid $grey-dark;
+							cursor: pointer;
+							display: inline-block;
+							margin: 15px auto;
+							margin-bottom: 50px;
+							height: 100px;
+							width: 100px;
+							span {
+								color: $grey-dark;
+								display: inline-block;
+								margin-top: 36px;
+							}
+							&:hover {
+								transition: background-color 0.2s;
+								background-color: $grey;
+							}
+						}
+					}
+					.modal {
+						table {
+							td {
+								border-top: none;
+								&.entry {
+									padding-left: 30px;
+								}
+							}
+						}
+					}
+					input[type="checkbox"] {
+						display: none;
+						&:checked + label {
+							background-color: $blue-follow;
+							&::before {
+								transform: translateX(34px);
+							}
+						}
+					}
+					input[type="checkbox"] + label {
+						background-color: $blue-light-follow;
+						width: 70px;
+						height: 27px;
+						padding: 2px;
+						position: relative;
+						cursor: pointer;
+						display: inline-block;
+						&::before {
+							content: "";
+							width: 32px;
+							background-color: white;
+							height: 23px;
+							display: inline-block;
+							transition: transform .1s ease;
+							position: absolute;
+							z-index: 1;
+						}
+					}
+					.on,
+					.off {
+						font-size: 12px;
+						color: white;
+						position: absolute;
+					}
+					.on {
+						top: 6px;
+						left: 24px;
+					}
+					.off {
+						top: 6px;
+						left: 54px;
+					}
+					.modal-body {
+						input[type="text"] {
+							border: 1px solid $grey-border-2;
+							padding: 8px 16px;
+							width: 100%;
+						}
+						input[disabled] {
+							border: 1px solid $grey;
+							cursor: not-allowed;
+							background-color: $grey;
+						}
+						.info {
+							font-size: 10px;
+							margin-bottom: 20px;
+						}
+					}
+					form input {
+						background: transparent;
+						border: none;
+						position: absolute;
+						width: 25px;
+						z-index: 1;
+					}
+					a.add-new-notif {
+						color: $blue-follow;
+					}
+					.footer {
+						margin: 15px 30px;
+
+						.new-follow-notification {
+							color: red;
+							display: inline-block;
+							font-weight: bold;
+							font-size: 14px;
+							padding: 10px 20px;
+						}
+						.submit-button {
+							@include border-radius(4px);
+							background-color: white;
+							border: 2px solid transparent;
+							color: $purple-dark;
+							font-weight: bold;
+							padding: 10px 20px;
+							text-transform: uppercase;
+							&:hover {
+								background-color: $purple-dark;
+								border: 2px solid $purple-dark;
+								color: white;
+							}
+						}
+						.cancel-button {
+							@include border-radius(4px);
+							background-color: white;
+							border: 2px solid transparent;
+							color: $grey-text;
+							font-weight: bold;
+							padding: 10px 20px;
+							text-transform: uppercase;
+							&:hover {
+								border: 2px solid $grey-text;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

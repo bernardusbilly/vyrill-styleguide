@@ -1,0 +1,20 @@
+.item-preview {
+	display: inline-block;
+	margin: 0 0 10px 50px;
+	height: 100px;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	width: calc(100% - 50px);
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+	span.icon-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

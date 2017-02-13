@@ -1,0 +1,85 @@
+/* For homepage.html */
+
+body {
+	.main.homepage {
+		.right-container {
+			.info-container {
+				color: black;
+				margin-top: 15px;
+				margin-bottom: 20px;
+				width: 100%;
+
+				.info-header {
+					color: white;
+					font-size: 14px;
+					letter-spacing: 1px;
+					padding: 5px 10px;
+					text-transform: uppercase;
+				}
+				.info-wrapper {
+					background: white;
+					font-size: 14px;
+					line-height: 24px;
+					margin-left: 10px;
+					margin-top: 20px;
+					padding: 15px 15px 15px 60px;
+					position: relative;
+					width: calc(100% - 10px);
+					.info-icon {
+						@include border-radius(50%);
+						background: white;
+						border: 1px solid $grey;
+						left: -10px;
+						line-height: normal;
+						padding: 8px;
+						position: absolute;
+						top: -10px;
+						img {
+							left: 13px;
+							position: absolute; 
+							top: 16px;
+							width: 20px;
+						}
+					}
+					.info-number {
+						font-size: 28px;
+					}
+					.info-link {
+						cursor: pointer;
+						&:hover, &:focus {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			.info-notification {
+				.info-header {
+					background: $header-notification;
+				}
+				.info-link {
+					color: $header-notification;
+				}
+				.last-login {
+					color: $grey-dark;
+					font-size: 12px;
+				}
+			}
+			.info-analytics {
+				.info-header {
+					background: $header-analytics;
+				}
+				.info-link {
+					color: $header-analytics;
+				}
+			}
+			.info-action {
+				.info-header {
+					background: $header-action;
+				}
+				.info-link {
+					color: $header-action;
+				}
+			}
+		}
+	}
+}

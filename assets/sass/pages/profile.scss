@@ -1,0 +1,53 @@
+/* For brand-profile.html and brand-manager-profile.html*/
+
+body {
+	.main.profile {
+		.right-container {
+			.main-container {
+				.photo-wrapper {
+					position: relative;
+					.photo {
+						max-width: 200px;
+						margin: 20px 0;
+					}
+					.icon {
+						bottom: 40px;
+    					left: calc(50% + 50px);
+						cursor: pointer;
+						position: absolute;
+					}
+					input[type=file] {
+						display: none;
+					}
+				}
+				form {
+					label {
+						display: block;
+					}
+					input[type=text],
+					input[type=password] {
+						border: 1px solid $grey-border-2;
+						padding: 6px 12px;
+						width: 100%;
+					}
+					.info {
+						display: block;
+						font-size: 10px;
+						margin-bottom: 14px;
+						margin-top: 4px;
+					}
+					input[type=submit] {
+						background-color: white;
+						border: 1px solid $grey-border-2;
+						border-radius: 8px;
+						margin: 20px 0;
+						padding: 4px 16px;
+						&:hover {
+							background-color: $grey;
+						}
+					}
+				}
+			}
+		}
+	}
+}
