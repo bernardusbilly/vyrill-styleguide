@@ -41,7 +41,8 @@ module.exports = function(grunt) {
 		        	dest: 'assets/img/sprite.png',
 		        	retinaSrcFilter: 'assets/img/sprite/*@2x.png',
 		        	retinaDest: 'assets/img/sprite@2x.png',
-		        	destCss: 'assets/css/spritesmith.css'
+		        	destCss: 'assets/css/spritesmith.css',
+		        	padding: '1px'
 		      	}
 	    	},
 		watch: {

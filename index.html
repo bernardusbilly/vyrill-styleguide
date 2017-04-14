@@ -7,9 +7,11 @@
     <meta name="description" content="Website description goes here">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <title>Vyrill</title>
+    <title>Vyrill Styleguide</title>
     
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/spritesmith.css">
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- END STYLESHEETS -->
@@ -22,9 +24,6 @@
     <script type="text/javascript" src="assets/js/custom.js"></script> -->
     <!-- END JAVASCRIPT -->
     <style>
-    main {
-    	width: 1208px;
-    }
     .box {
 	  background: tomato;
 	  height: 150px;
@@ -40,124 +39,277 @@
 </head>
     
 <body>
-
-<div class="card-container container-top-yellow">
-	<div class="card-content">
-		<div class="title font--page-title"> Dyson Vacuum </div>
-		<figure>
-			<img src="./assets/img/product.jpg" />
-		</figure>
-		<div class="card-info"> <span class="icon icon-video"></span> 12 videos </div>
-		<div class="card-info"> <span class="icon icon-eye"></span> 123,456 views </div>
-		<div class="card-info"> <span class="icon icon-network"></span> 7 influencers </div>
+<section class="text-center mt-50 mb-100">
+	<img src="assets/img/vyrill-styleguide.jpg" class="page-header"/>
+	<div class="font--caption">
+		by <a href="http://www.bernardusbilly.com" class="font--link-color"> Bernardus Billy Tjiptoning </a>
+		v.0.0.3
 	</div>
-	<div class="card-footer">
-		<a href="#"> View Product </a>
-		<div class="action-wrapper">
-			<div type="love"><span class="icon icon-heart"></span></div>
-			<div type="flag"><span class="icon icon-flag"></span></div>
-			<div type="note"><span class="icon icon-note"></span></div>
+</section>
+
+<section class="mb-100">
+	<div class="v-container" id="1"> <h1> Section 1: Color</h1> </div>
+	<div class="v-container" id="1.1"> <h2> 1.1 Primary Color </h2> </div>
+	<div class="v-container">
+		<div class="color-wrapper text-center">
+			<div class="box-color vyrill-red"></div>
+			<div class="mt-10"> Vyrill Red </div>
+			<div class="mt-10"> <i> $vyrill-red </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color blue"></div>
+			<div class="mt-10"> Blue </div>
+			<div class="mt-10"> <i> $blue </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color yellow"></div>
+			<div class="mt-10"> Yellow </div>
+			<div class="mt-10"> <i> $yellow </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color green"></div>
+			<div class="mt-10"> Green </div>
+			<div class="mt-10"> <i> $green </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color pink"></div>
+			<div class="mt-10"> Pink </div>
+			<div class="mt-10"> <i> $pink </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color gray"></div>
+			<div class="mt-10"> Gray </div>
+			<div class="mt-10"> <i> $gray </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color white"></div>
+			<div class="mt-10"> White </div>
+			<div class="mt-10"> <i> $white </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color black"></div>
+			<div class="mt-10"> Black </div>
+			<div class="mt-10"> <i> $black </i> </div>
+		</div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+	</div>
+
+	<div class="v-container" id="1.2"> <h2> 1.2 Secondary Color </h2> </div>
+	<div class="v-container">
+		<div class="color-wrapper text-center">
+			<div class="box-color white-lighter"></div>
+			<div class="mt-10"> White Lighter </div>
+			<div class="mt-10"> <i> $white-lighter </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color solid-white"></div>
+			<div class="mt-10"> Solid White </div>
+			<div class="mt-10"> <i> $solid-white </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color gray-lightest"></div>
+			<div class="mt-10"> Gray Lightest </div>
+			<div class="mt-10"> <i> $gray-lightest </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color gray-lighter"></div>
+			<div class="mt-10"> Gray lighter </div>
+			<div class="mt-10"> <i> $gray-lighter </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color gray"></div>
+			<div class="mt-10"> Gray </div>
+			<div class="mt-10"> <i> $gray </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color gray-dark"></div>
+			<div class="mt-10"> Gray Dark </div>
+			<div class="mt-10"> <i> $gray-dark </i> </div>
+		</div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+	</div>
+
+	<div class="v-container" id="1.3"> <h2> 1.3 Background and Border Color </h2> </div>
+	<div class="v-container">
+		<div class="color-wrapper text-center">
+			<div class="box-color background-color"></div>
+			<div class="mt-10"> Background Color </div>
+			<div class="mt-10"> <i> $background-color </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color border-color"></div>
+			<div class="mt-10"> Border Color </div>
+			<div class="mt-10"> <i> $border-color </i> </div>
+		</div>
+		<div class="color-wrapper invert-bg text-center">
+			<div class="box-color card-bg-color"></div>
+			<div class="mt-10"> Card Bg Color </div>
+			<div class="mt-10"> <i> $card-bg-color </i> </div>
+		</div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+	</div>
+
+	<div class="v-container" id="1.4"> <h2> 1.4 Text Color </h2> </div>
+	<div class="v-container">
+		<div class="font--caption">
+			Will be explained more in
+			<a href="#2.3" class="font--link-color"> font color section </a> 
 		</div>
 	</div>
-</div>
+	<div class="v-container">
+		<div class="color-wrapper text-center">
+			<div class="box-color text-color"></div>
+			<div class="mt-10"> Text Color </div>
+			<div class="mt-10"> <i> $text-color </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color text-color-fade"></div>
+			<div class="mt-10"> Text Color Fade</div>
+			<div class="mt-10"> <i> $text-color-fade </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color text-color-invert"></div>
+			<div class="mt-10"> Text Color Invert</div>
+			<div class="mt-10"> <i> $text-color-invert </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
+			<div class="box-color link-color"></div>
+			<div class="mt-10"> Link Color </div>
+			<div class="mt-10"> <i> $link-color </i> </div>
+		</div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+		<div class="color-wrapper invisible-wrapper"></div>
+	</div>
+</section>
 
-<button class="btn--primary">
-	<span class="icon icon-plus"> + </span>
-	Add new product
-</button>
-<button class="btn--primary-small"> Apply </button>
-<button class="btn--secondary-red"> Apply </button>
-<button class="btn--secondary-gray"> Apply </button>
-<button class="btn--secondary-red-small"> Apply </button>
-<button class="btn--secondary-gray-small"> Apply </button>
-
-
-
+<section class="mb-100">
+	<div class="v-container" id="2"> <h1> Section 2: Typography </h1> </div>
+	<div class="v-container" id="2.1"> <h2> 2.1. Font Type </h2> </div>
 	<div class="v-container">
 		<div class="col-1-3">
-			<div class="box">1-3</div>
+			<div class="box-wrapper text-center general-font">
+				ProximaNovaRegular <br><br>
+				<i> @include general-font() </i> <br><br>
+				<div class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
 		</div>
 		<div class="col-1-3">
-			<div class="box">1-3</div>
+			<div class="box-wrapper text-center semibold-font">
+				ProximaNovaSemiBold <br><br>
+				<i> @include general-font() </i> <br><br>
+				<div class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+				</div>
+			</div>
 		</div>
 		<div class="col-1-3">
-			<div class="box">1-3</div>
+			<div class="box-wrapper text-center bold-font">
+				ProximaNovaBold <br><br>
+				<i> @include general-font() </i> <br><br>
+				<div class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+		<div class="col-1-3"></div>
+	</div>
+
+	<div class="v-container" id="2.2" > <h2> 2.2. Font Size </h2> </div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--object-title"> Title Here </div>
+				<br> <i> .font--object-title </i>
+			</div>
 		</div>
 		<div class="col-1-3">
-			<div class="box">1-3</div>
+			<div class="box-wrapper">
+				<div class="font--page-title"> Title Here </div>
+				<br> <i> .font--page-title || .font--main-nav </i>
+			</div>
 		</div>
-		<div class="col-2-3">
-			<div class="box">2-3</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--caption"> Title Here </div>
+				<br> <i> .font--caption </i>
+			</div>
 		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--subcaption"> Title Here </div>
+				<br> <i> .font--subcaption </i>
+			</div>
+		</div>
+		<div class="col-1-3"></div>
+		<div class="col-1-3"></div>
+		<div class="col-1-3"></div>
+	</div>
+
+	<div class="v-container" id="2.3"> <h2> 2.3. Font color </h2> </div>
+	<div class="v-container"> 
+		<div class="font--caption">
+			Further explanation from the
+			<a href="#1.4" class="font--link-color"> color section </a> 
+		</div>
+	</div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--text-color"> Standard text color is black. </div>
+				<br> <i> .font--text-color </i>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--text-color-fade"> This is mostly used for unclickable element. </div>
+				<br> <i> .font--text-color-fade </i>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper invert-bg">
+				<div class="font--text-color-invert"> For darker background color, we can use this color. </div>
+				<br> <i class="font--text-color-invert"> .font--text-color-invert </i>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--link-color"> This font color is used when we want to make a clickable element stands out </div>
+				<br> <i> .font--link-color </i>
+			</div>
+		</div>
+		<div class="col-1-3"></div>
+		<div class="col-1-3"></div>
+		<div class="col-1-3"></div>
+	</div>
+
+	<div class="v-container" id="3"> <h1> Section 3: Iconography </h1> </div>
+	<div class="v-container">
 		<div class="col-3-3">
-			<div class="box">3-3</div>
-		</div>
-	</div>
-	<div class="v-container">
-		<div class="col-1-3">
-			<div class="card-container container-top-yellow">
-				<div class="card-content">
-					<div class="title font--page-title"> Dyson Vacuum </div>
-					<figure>
-						<img src="./assets/img/product.jpg" />
-					</figure>
-					<div class="card-info"> <span class="icon icon-video"></span> 12 videos </div>
-					<div class="card-info"> <span class="icon icon-eye"></span> 123,456 views </div>
-					<div class="card-info"> <span class="icon icon-network"></span> 7 influencers </div>
-				</div>
-				<div class="card-footer">
-					<a href="#"> View Product </a>
-					<div class="action-wrapper">
-						<div type="love"><span class="icon icon-heart"></span></div>
-						<div type="flag"><span class="icon icon-flag"></span></div>
-						<div type="note"><span class="icon icon-note"></span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-1-3">
-			<div class="card-container container-top-yellow">
-				<div class="card-content">
-					<div class="title font--page-title"> Dyson Vacuum </div>
-					<figure>
-						<img src="./assets/img/product.jpg" />
-					</figure>
-					<div class="card-info"> <span class="icon icon-video"></span> 12 videos </div>
-					<div class="card-info"> <span class="icon icon-eye"></span> 123,456 views </div>
-					<div class="card-info"> <span class="icon icon-network"></span> 7 influencers </div>
-				</div>
-				<div class="card-footer">
-					<a href="#"> View Product </a>
-					<div class="action-wrapper">
-						<div type="love"><span class="icon icon-heart"></span></div>
-						<div type="flag"><span class="icon icon-flag"></span></div>
-						<div type="note"><span class="icon icon-note"></span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-1-3">
-			<div class="card-container container-top-yellow">
-				<div class="card-content">
-					<div class="title font--page-title"> Dyson Vacuum </div>
-					<figure>
-						<img src="./assets/img/product.jpg" />
-					</figure>
-					<div class="card-info"> <span class="icon icon-video"></span> 12 videos </div>
-					<div class="card-info"> <span class="icon icon-eye"></span> 123,456 views </div>
-					<div class="card-info"> <span class="icon icon-network"></span> 7 influencers </div>
-				</div>
-				<div class="card-footer">
-					<a href="#"> View Product </a>
-					<div class="action-wrapper">
-						<div type="love"><span class="icon icon-heart"></span></div>
-						<div type="flag"><span class="icon icon-flag"></span></div>
-						<div type="note"><span class="icon icon-note"></span></div>
-					</div>
-				</div>
+			<div class="box-wrapper">
+				The tools that we use to create sprite image is <a href="https://github.com/Ensighten/grunt-spritesmith" class="font--link-color"> spritesmith </a> from <a href="https://gruntjs.com/" class="font--link-color"> Grunt</a>. And one more thing to notice is the usage of retina icons; meaning that every icon has 2 different sizes where can be accessed automatically if the user has retina display.
+				<div class="mt-30 text-center"> <img src="assets/img/sprite.png" /> </div>
+				<div class="mt-30 text-center"> <img src="assets/img/sprite@2x.png" /> </div>
 			</div>
 		</div>
 	</div>
+</section>
 </body>
+
+<script type="text/javascript" src="assets/js/lib/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="assets/js/lib/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
     
 </html>
