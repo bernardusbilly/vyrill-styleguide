@@ -99,6 +99,9 @@ body {
 .font--text-color-invert {
   color: #FFF; }
 
+.font--text-color-alert {
+  color: #F34244; }
+
 .font--link-color {
   color: #F34244; }
   .font--link-color:hover, .font--link-color:focus, .font--link-color:target {
@@ -124,6 +127,8 @@ body {
   width: 300px;
   position: relative;
   overflow: hidden; }
+  .card-container.container-top-default {
+    border-top: 6px solid #FF3C37; }
   .card-container.container-top-yellow {
     border-top: 6px solid #FFB500; }
   .card-container.container-top-blue {
@@ -134,7 +139,7 @@ body {
     border-top: 6px solid #A26DA3; }
   .card-container.container-top-red {
     border-top: 6px solid #FF3C37; }
-  .card-container.card-size-large {
+  .card-container.card-size-large, .card-container.card-size-full {
     width: 100%; }
   .card-container .card-content {
     align-items: stretch;
@@ -713,6 +718,8 @@ figure {
       background-color: #BCBCC0; }
     .color-wrapper .box-color.text-color-invert {
       background-color: #FFF; }
+    .color-wrapper .box-color.text-color-alert {
+      background-color: #F34244; }
     .color-wrapper .box-color.link-color {
       background-color: #F34244; }
 

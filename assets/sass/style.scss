@@ -91,6 +91,7 @@ figure {
 		&.text-color { background-color: #000; }
 		&.text-color-fade { background-color: $gray; }
 		&.text-color-invert { background-color: $solid-white; }
+		&.text-color-alert { background-color: #F34244; }
 		&.link-color { background-color: #F34244; }
 	}
 }

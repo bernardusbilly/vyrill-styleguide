@@ -113,6 +113,7 @@ $border-color: #DEE1E4;
 $text-color: #000;
 $text-color-fade: $gray;
 $text-color-invert: $solid-white;
+$text-color-alert: #F34244;
 $link-color: #F34244;
 
 /*
@@ -192,6 +193,10 @@ body {
     color: $text-color-invert;
 }
 
+.font--text-color-alert {
+    color: $link-color;
+}
+
 .font--link-color {
     color: $link-color;
     &:hover,
@@ -225,12 +230,13 @@ body {
     width: 300px;
     position: relative;
     overflow: hidden;
+    &.container-top-default { border-top: 6px solid $vyrill-red; }
     &.container-top-yellow { border-top: 6px solid $yellow; }
     &.container-top-blue { border-top: 6px solid $blue; }
     &.container-top-green { border-top: 6px solid $green; }
     &.container-top-pink { border-top: 6px solid $pink; }
     &.container-top-red { border-top: 6px solid $vyrill-red; }
-    &.card-size-large { width: 100%; }
+    &.card-size-large, &.card-size-full { width: 100%; }
     .card-content {
         align-items: stretch;
         border-color: $border-color;

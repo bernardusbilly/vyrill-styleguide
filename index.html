@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Website description goes here">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
 
     <title>Vyrill Styleguide</title>
     
@@ -43,7 +44,7 @@
 	<img src="assets/img/vyrill-styleguide.jpg" class="page-header"/>
 	<div class="font--caption">
 		by <a href="http://www.bernardusbilly.com" class="font--link-color"> Bernardus Billy Tjiptoning </a>
-		v.0.0.3
+		v.0.0.4
 	</div>
 </section>
 
@@ -182,6 +183,11 @@
 			<div class="mt-10"> <i> $text-color-invert </i> </div>
 		</div>
 		<div class="color-wrapper text-center">
+			<div class="box-color text-color-alert"></div>
+			<div class="mt-10"> Text Color Alert </div>
+			<div class="mt-10"> <i> $text-color-alert </i> </div>
+		</div>
+		<div class="color-wrapper text-center">
 			<div class="box-color link-color"></div>
 			<div class="mt-10"> Link Color </div>
 			<div class="mt-10"> <i> $link-color </i> </div>
@@ -200,7 +206,7 @@
 		<div class="col-1-3">
 			<div class="box-wrapper text-center general-font">
 				ProximaNovaRegular <br><br>
-				<i> @include general-font() </i> <br><br>
+				<i> @include general-font() </i> <br> || <br><i> .general-font() </i> <br><br>
 				<div class="text-justify">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</div>
@@ -209,7 +215,7 @@
 		<div class="col-1-3">
 			<div class="box-wrapper text-center semibold-font">
 				ProximaNovaSemiBold <br><br>
-				<i> @include general-font() </i> <br><br>
+				<i> @include semibold-font() </i> <br> || <br><i> .semibold-font() </i> <br><br>
 				<div class="text-justify">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
 				</div>
@@ -218,7 +224,7 @@
 		<div class="col-1-3">
 			<div class="box-wrapper text-center bold-font">
 				ProximaNovaBold <br><br>
-				<i> @include general-font() </i> <br><br>
+				<i> @include bold-font() </i> <br> || <br><i> .bold-font() </i> <br><br>
 				<div class="text-justify">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</div>
@@ -286,7 +292,13 @@
 		</div>
 		<div class="col-1-3">
 			<div class="box-wrapper">
-				<div class="font--link-color"> This font color is used when we want to make a clickable element stands out </div>
+				<div class="font--link-color"> This class is used to highlight a text. </div>
+				<br> <i> .font--text-color-alert </i>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div> This font color is used when we want to make a <a href="" class="font--link-color">clickable element</a> stands out </div>
 				<br> <i> .font--link-color </i>
 			</div>
 		</div>
@@ -294,7 +306,8 @@
 		<div class="col-1-3"></div>
 		<div class="col-1-3"></div>
 	</div>
-
+</section>
+<section class="mb-100">
 	<div class="v-container" id="3"> <h1> Section 3: Iconography </h1> </div>
 	<div class="v-container">
 		<div class="col-3-3">
@@ -306,6 +319,273 @@
 		</div>
 	</div>
 </section>
+<section class="mb-100">
+	<div class="v-container" id="4"> <h1> Section 4: Card </h1> </div>
+	<div class="v-container" id="4.1"> <h2> 4.1 Card Default Settings </h2> </div>
+	<div class="v-container">
+		<div class="card-container container-top-default">
+		    <div class="card-content">
+		    	<div class="mt-10 mb-10">
+		    		<strong>This is how you create the card:</strong>
+					<i> div.card-container.container.top-default</i><br>
+					<i> div.card-content</i><br>
+				</div>
+				<div class="mt-10"> Certain things that are set default from this card:</div>
+				<ul class="mt-10">
+					<li>- The default <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="font--link-color">display is flex</a><span class="font--text-color-fade">, thus using this card without the given grid or without a container that has a flex display will not be a good option</span>
+					<li>- By default the height of a card is <i>360px</i> and the width is <i>300px</i>
+				</ul>
+		    </div>
+		</div>
+	</div>
+
+	<div class="v-container" id="4.2"> <h2> 4.2 Card Header Color </h2> </div>
+	<div class="v-container"> 
+		<div class="card-container container-top-default" style="height: 100px;">
+		    <div class="card-content text-center">
+		    	<div class="mt-15">
+		    		<i> .container-top-default <br> || <br> .container-top-red</i>
+		    	</div>
+		    </div>
+		</div>
+		<div class="card-container container-top-yellow" style="height: 100px;">
+		    <div class="card-content text-center">
+		    	<div class="mt-15">
+		    		<i> .container-top-yellow </i>
+		    	</div>
+		    </div>
+		</div>
+		<div class="card-container container-top-blue" style="height: 100px;">
+		    <div class="card-content text-center">
+		    	<div class="mt-15">
+		    		<i> .container-top-blue </i>
+		    	</div>
+		    </div>
+		</div>
+		<div class="card-container container-top-green" style="height: 100px;">
+		    <div class="card-content text-center">
+		    	<div class="mt-15">
+		    		<i> .container-top-green </i>
+		    	</div>
+		    </div>
+		</div>
+		<div class="card-container container-top-pink" style="height: 100px;">
+		    <div class="card-content text-center">
+		    	<div class="mt-15">
+		    		<i> .container-top-pink </i>
+		    	</div>
+		    </div>
+		</div>
+		<div class="card-container invisible-card"></div>
+		<div class="card-container invisible-card"></div>
+		<div class="card-container invisible-card"></div>
+	</div>
+
+	<div class="v-container" id="4.3"> <h2> 4.3 Card Sizes </h2> </div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="card-container container-top-default card-size-large" style="height: 200px;">
+				<div class="card-content text-center"> 
+					<div class="mt-50">
+						Card width can be made flexible depend on the parent container for example these 2 cards.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-2-3">
+			<div class="card-container container-top-default card-size-large" style="height: 200px;">
+				<div class="card-content text-center">
+					<div class="mt-50">
+						Card width can be made flexible depend on the parent container by having the class:
+						<div class="mt-10"><i>.card-size-full || .card-size-large</i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="v-container" id="4.4"> <h2> 4.4 Card Types </h2> </div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="card-container container-top-yellow">
+			    <div class="card-content">
+			        <div class="title font--page-title"> 
+			            Dyson Vacuum 
+			        </div>
+			        <div class="card-indicator inline-block-right"><span class="icon icon-box-24"></span></div>
+			        <figure class="preview">
+			            <img src="./assets/img/product.jpg" alt="product-preview"/>
+			        </figure>
+			        <div class="related-items">
+			            <ul class="bxslider">
+			                <li><img src="./assets/img/video-preview.jpg" alt="related-video" /></li>
+			                <li><img src="./assets/img/video-preview.jpg" alt="related-video" /></li>
+			            </ul>
+			        </div>
+			        <div class="card-info"> <span class="icon icon-play-24"></span><a href="manage-video.html"> 12 videos </a></div>
+			        <div class="card-info"> <span class="icon icon-glasses-24"></span><a> 123,456 views </a></div>
+			        <div class="card-info"> <span class="icon icon-networking-24"></span><a href="manage-influencer.html"> 7 influencers </a></div>
+			        <div class="card-footer">
+			            <a href="#"> View Product </a>
+			            <div class="action-wrapper">
+			                <label>
+			                    <input name="edit" type="checkbox" />
+			                    <span class="icon icon-pencil-24"></span>
+			                </label>
+			                <label>
+			                    <input name="like" type="checkbox" />
+			                    <span class="icon icon-heart-24"></span>
+			                </label>
+			                <label>
+			                    <input name="flag" type="checkbox" />
+			                    <span class="icon icon-flag-24"></span>
+			                </label>
+			                <label>
+			                    <input name="memo" type="checkbox" />
+			                    <span class="icon icon-memo-24"></span>
+			                </label>
+			                <div class="memo-popup">
+			                    <div class="text-center font--page-title mt-10">
+			                        Add a note
+			                    </div>
+			                    <textarea class="mt-10"></textarea>
+			                    <button type="submit" class="btn--secondary-red-small inline-block-right mt-10 mr-10">Submit</button>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="col-2-3">
+			<div class="box-wrapper">
+				<span class="font--page-title"> 1. Card for Products/Videos </span>
+				<ul class="mt-10 mb-30">
+					<li> - The "Dyson Vacuum" has class <i>.title</i> and <i>.font--page-title</i>
+					<li> - The small icon on the top right has class <i>.card-indicator</i> and <i>.inline-block-right</i>
+					<li> - The image is under <i>figure.preview</i>
+					<li> - The card has a <i>.card-footer</i> for View Product and all the icons next to it
+				</ul>
+				<button class="btn--primary">Copy example to clipboard</button>
+			</div>
+		</div>
+	</div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="card-container container-top-blue">
+		        <div class="card-content">
+		            <div class="close-button" role="button"></div>
+		            <div class="title-2 font--page-title"> <span class="icon icon-right-circle-30"></span> Follow </div>
+		            3 new influencers
+		            <ul class="bxslider">
+		                <li><img src="./assets/img/influencer.png" alt="influencer" /></li>
+		                <li><img src="./assets/img/influencer2.png" alt="influencer"/></li>
+		            </ul>
+		            5 new videos
+		            <ul class="bxslider">
+		                <li><img src="./assets/img/influencer.png" alt="influencer"/></li>
+		                <li><img src="./assets/img/influencer2.png" alt="influencer"/></li>
+		            </ul>
+		            <div class="text-center">
+		                <button class="btn--secondary-gray"> See all follow </button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-2-3">
+			<div class="box-wrapper">
+				<span class="font--page-title"> 2. Card Summary for Homepage </span>
+				<ul class="mt-10 mb-30">
+					<li> - It has a close button by adding <i>div.close-button</i>
+					<li> - The title is a bit different from the last card, it now has <i>.title-2</i> 
+					<li> - Input the corresponding icon inside the <i>.title-2</i>
+					<li> - For this card, the carousel that I use is <a href="http://bxslider.com/" class="font--link-color"> bxslider.js </a>
+					<li> - Lastly, every button inside the card use <i>button.btn--secondary-gray</i>
+					<li> <span class="font--caption">It will be explain in more depth in <a href="#5" class="font--link-color"> section 5</a></span>
+				</ul>
+				<button class="btn--primary">Copy example to clipboard</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="mb-100">
+	<div class="v-container" id="5"> <h1> Section 5: Buttons </h1> </div>
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--page-title mb-10"> Primary Button </div>
+				<div class="mb-10">
+					<button class="btn--primary"> Apply </button>
+					<i> .btn--primary </i>
+				</div>
+				<div class="mb-10">
+					<button class="btn--primary-small"> Apply </button>
+					<i> .btn--primary-small </i>
+				</div>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--page-title mb-10"> Secondary Red Button </div>
+				<div class="mb-10">
+					<button class="btn--secondary-red"> Apply </button>
+					<i> .btn--secondary-red </i>
+				</div>
+				<div class="mb-10">
+					<button class="btn--secondary-red-small"> Apply </button>
+					<i> .btn--secondary-red-small </i>
+				</div>
+			</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box-wrapper">
+				<div class="font--page-title mb-10"> Secondary Gray Button </div>
+				<div class="mb-10">
+					<button class="btn--secondary-gray"> Apply </button>
+					<i> .btn--secondary-gray </i>
+				</div>
+				<div class="mb-10">
+					<button class="btn--secondary-gray-small"> Apply </button>
+					<i> .btn--secondary-gray-small </i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="mb-100">
+	<div class="v-container" id="6"> <h1> Section 6: Grid </h1> </div>
+	<div class="v-container"><div class="font--text-color-alert"> ! This section is still under development ! </div></div>
+	<div class="v-container">
+		<div class="box-wrapper text-center">
+			<div class="mt-10">
+				The grid that we have right now works fine for having a fix width and set everything inside it in the center. It also works fine for dividing the column equally for any number of elements inside that container.
+			</div>
+			<div class="mt-10"><i>.v-container</i></div>
+		</div>
+	</div>
+</section>
+
+<div class="v-container">
+	<div class="col-1-3">
+		<div class="box">1-3</div>
+	</div>
+	<div class="col-1-3">
+		<div class="box">1-3</div>
+	</div>
+	<div class="col-1-3">
+		<div class="box">1-3</div>
+	</div>
+	<div class="col-1-3">
+		<div class="box">1-3</div>
+	</div>
+	<div class="col-2-3">
+		<div class="box">2-3</div>
+	</div>
+	<div class="col-3-3">
+		<div class="box">3-3</div>
+	</div>
+</div>
 </body>
 
 <script type="text/javascript" src="assets/js/lib/jquery-1.11.3.js"></script>
