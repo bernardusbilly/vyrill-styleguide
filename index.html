@@ -24,18 +24,6 @@
     <script type="text/javascript" src="assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script> -->
     <!-- END JAVASCRIPT -->
-    <style>
-    .box {
-	  background: tomato;
-	  height: 150px;
-	  margin-bottom: 10px;
-	  line-height: 150px;
-	  color: white;
-	  font-weight: bold;
-	  font-size: 3em;
-	  text-align: center;
-	}
-    </style>
     
 </head>
     
@@ -44,7 +32,7 @@
 	<img src="assets/img/vyrill-styleguide.jpg" class="page-header"/>
 	<div class="font--caption">
 		by <a href="http://www.bernardusbilly.com" class="font--link-color"> Bernardus Billy Tjiptoning </a>
-		v.0.0.4
+		v.0.0.5
 	</div>
 </section>
 
@@ -422,11 +410,11 @@
 			                <li><img src="./assets/img/video-preview.jpg" alt="related-video" /></li>
 			            </ul>
 			        </div>
-			        <div class="card-info"> <span class="icon icon-play-24"></span><a href="manage-video.html"> 12 videos </a></div>
+			        <div class="card-info"> <span class="icon icon-play-24"></span><a href=""> 12 videos </a></div>
 			        <div class="card-info"> <span class="icon icon-glasses-24"></span><a> 123,456 views </a></div>
-			        <div class="card-info"> <span class="icon icon-networking-24"></span><a href="manage-influencer.html"> 7 influencers </a></div>
+			        <div class="card-info"> <span class="icon icon-networking-24"></span><a href=""> 7 influencers </a></div>
 			        <div class="card-footer">
-			            <a href="#"> View Product </a>
+			            <a href=""> View Product </a>
 			            <div class="action-wrapper">
 			                <label>
 			                    <input name="edit" type="checkbox" />
@@ -465,7 +453,54 @@
 					<li> - The image is under <i>figure.preview</i>
 					<li> - The card has a <i>.card-footer</i> for View Product and all the icons next to it
 				</ul>
-				<button class="btn--primary">Copy example to clipboard</button>
+				<button class="btn btn--primary" data-clipboard-text='<div class="card-container container-top-yellow">
+				    <div class="card-content">
+				        <div class="title font--page-title"> 
+				            Dyson Vacuum 
+				        </div>
+				        <div class="card-indicator inline-block-right"><span class="icon icon-box-24"></span></div>
+				        <figure class="preview">
+				            <img src="./assets/img/product.jpg" alt="product-preview"/>
+				        </figure>
+				        <div class="related-items">
+				            <ul class="bxslider">
+				                <li><img src="./assets/img/video-preview.jpg" alt="related-video" /></li>
+				                <li><img src="./assets/img/video-preview.jpg" alt="related-video" /></li>
+				            </ul>
+				        </div>
+				        <div class="card-info"> <span class="icon icon-play-24"></span><a href=""> 12 videos </a></div>
+				        <div class="card-info"> <span class="icon icon-glasses-24"></span><a> 123,456 views </a></div>
+				        <div class="card-info"> <span class="icon icon-networking-24"></span><a href=""> 7 influencers </a></div>
+				        <div class="card-footer">
+				            <a href=""> View Product </a>
+				            <div class="action-wrapper">
+				                <label>
+				                    <input name="edit" type="checkbox" />
+				                    <span class="icon icon-pencil-24"></span>
+				                </label>
+				                <label>
+				                    <input name="like" type="checkbox" />
+				                    <span class="icon icon-heart-24"></span>
+				                </label>
+				                <label>
+				                    <input name="flag" type="checkbox" />
+				                    <span class="icon icon-flag-24"></span>
+				                </label>
+				                <label>
+				                    <input name="memo" type="checkbox" />
+				                    <span class="icon icon-memo-24"></span>
+				                </label>
+				                <div class="memo-popup">
+				                    <div class="text-center font--page-title mt-10">
+				                        Add a note
+				                    </div>
+				                    <textarea class="mt-10"></textarea>
+				                    <button type="submit" class="btn--secondary-red-small inline-block-right mt-10 mr-10">Submit</button>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>'>Copy example to clipboard</button>
 			</div>
 		</div>
 	</div>
@@ -502,10 +537,73 @@
 					<li> - Lastly, every button inside the card use <i>button.btn--secondary-gray</i>
 					<li> <span class="font--caption">It will be explain in more depth in <a href="#5" class="font--link-color"> section 5</a></span>
 				</ul>
-				<button class="btn--primary">Copy example to clipboard</button>
+				<button class="btn btn--primary" data-clipboard-text='<div class="card-container container-top-blue">
+			        <div class="card-content">
+			            <div class="close-button" role="button"></div>
+			            <div class="title-2 font--page-title"> <span class="icon icon-right-circle-30"></span> Follow </div>
+			            3 new influencers
+			            <ul class="bxslider">
+			                <li><img src="./assets/img/influencer.png" alt="influencer" /></li>
+			                <li><img src="./assets/img/influencer2.png" alt="influencer"/></li>
+			            </ul>
+			            5 new videos
+			            <ul class="bxslider">
+			                <li><img src="./assets/img/influencer.png" alt="influencer"/></li>
+			                <li><img src="./assets/img/influencer2.png" alt="influencer"/></li>
+			            </ul>
+			            <div class="text-center">
+			                <button class="btn--secondary-gray"> See all follow </button>
+			            </div>
+			        </div>
+			    </div>'>Copy example to clipboard</button>
 			</div>
 		</div>
 	</div>
+
+	<div class="v-container" id="4.5"> <h2> 4.5 Card Hacks </h2> </div>
+	<div class="v-container"> 
+		<div class="box-wrapper">
+			As mentioned above, the card's display is default to flex: so, the grid will look weird if the number of cards in the last row is less than the full capacity for each row. The solution to this display problem is by having an invisible card to fulfill each row to its full capacity.
+		</div>
+	</div>
+	<div class="v-container mt-30 mb-30"> Example 1. When we only have 5 items and do not use the invisible card.</div>
+	<div class="v-container">
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"><div class="mt-10"> This is what happen if the card is not used to its full capacity for each row.</div></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"><div class="mt-10"> This is what happen if the card is not used to its full capacity for each row.</div></div>
+		</div>
+	</div>
+	<div class="v-container mt-30 mb-30"> Example 2. When we only have 5 items use the invisible card</div>
+	<div class="v-container">
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container container-top-default" style="height: 100px;">
+			<div class="card-content"></div>
+		</div>
+		<div class="card-container invisible-card" style="height: 100px;"></div>
+	</div>
+
 </section>
 
 <section class="mb-100">
@@ -559,37 +657,47 @@
 	<div class="v-container">
 		<div class="box-wrapper text-center">
 			<div class="mt-10">
-				The grid that we have right now works fine for having a fix width and set everything inside it in the center. It also works fine for dividing the column equally for any number of elements inside that container.
+				The grid that we have right now works like a normal grid display with minimum width 376px and maximum width 1124px. Every element inside that container will have space between them distributed equally.
 			</div>
 			<div class="mt-10"><i>.v-container</i></div>
 		</div>
 	</div>
 </section>
 
-<div class="v-container">
-	<div class="col-1-3">
-		<div class="box">1-3</div>
+<section class="mb-100">
+	<div class="v-container">
+		<div class="col-1-3">
+			<div class="box">1-3</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box">1-3</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box">1-3</div>
+		</div>
+		<div class="col-1-3">
+			<div class="box">1-3</div>
+		</div>
+		<div class="col-2-3">
+			<div class="box">2-3</div>
+		</div>
+		<div class="col-3-3">
+			<div class="box">3-3</div>
+		</div>
 	</div>
-	<div class="col-1-3">
-		<div class="box">1-3</div>
+</section>
+
+<section class="mb-100">
+	<div class="text-center">
+		Bernardus Billy Tjiptoning <br>
+		Copyright &copy 2017
 	</div>
-	<div class="col-1-3">
-		<div class="box">1-3</div>
-	</div>
-	<div class="col-1-3">
-		<div class="box">1-3</div>
-	</div>
-	<div class="col-2-3">
-		<div class="box">2-3</div>
-	</div>
-	<div class="col-3-3">
-		<div class="box">3-3</div>
-	</div>
-</div>
+</section>
 </body>
 
 <script type="text/javascript" src="assets/js/lib/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/clipboard.min.js"></script>
 <script type="text/javascript" src="assets/js/scripts.js"></script>
     
 </html>

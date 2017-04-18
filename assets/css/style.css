@@ -21,6 +21,7 @@
 	Section 3: Iconography
 
 	Section 4: Cards
+        4.1 
 
 	Section 5: Buttons
 		5.1 Primary Buttons
@@ -111,7 +112,7 @@ body {
 	==================== 
 	Section 3: Iconography
 	====================
-	*see spritesmith.css
+	see spritesmith.css
 */
 /*
 	==================== 
@@ -656,6 +657,16 @@ figure {
 .close-button {
   background: transparent;
   border: none; }
+
+.box {
+  background: tomato;
+  height: 150px;
+  margin-bottom: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center; }
 
 .page-header {
   max-width: 100%;

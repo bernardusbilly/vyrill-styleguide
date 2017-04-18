@@ -1,10 +1,7 @@
+
 $(document).ready(() => {
-	/**
-		Close Card
-	*/
-	$(".card-container .close-button").click(function() {
-		removeCard($(this).parents(".card-container"));
-	});
+
+	var clipboard = new Clipboard('.btn');
 
 	/**
 		Action Wrapper
@@ -34,20 +31,6 @@ $(document).ready(() => {
 			$(p).find("input[name='memo']").prop("checked", false);
 		} else {
 			$(p).find("input[name='memo']").prop("checked", true);
-		}
-	});
-
-
-	/**
-		Change View for the cards
-	*/
-	$(".view-wrapper").on("click", "input", function(e) {
-		if ($(this).prop("value") === "text-view") {
-			changeView("text-view");
-		} else if ($(this).prop("value") === "list-view") {
-			changeView("list-view");
-		} else { // card-view
-			changeView("card-view");
 		}
 	});
 
