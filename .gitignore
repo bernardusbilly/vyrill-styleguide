@@ -1,0 +1,6 @@
+# Mac config
+.DS_Store
+.sass-cache
+
+# Ignored files
+node_modules/
